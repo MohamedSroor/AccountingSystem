@@ -1,0 +1,7 @@
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\Work_final.csproj.AssemblyReference.cache
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\Work_final.Customer.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\Work_final.Form1.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.Properties.Resources.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\Work_final.Suppliers.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\Work_final.csproj.GenerateResource.cache
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\Work_final.csproj.CoreCompileInputs.cache

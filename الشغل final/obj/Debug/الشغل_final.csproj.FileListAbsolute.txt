@@ -1,0 +1,17 @@
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.csproj.AssemblyReference.cache
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.Form1.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.Properties.Resources.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.csproj.GenerateResource.cache
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.csproj.CoreCompileInputs.cache
+E:\الشغل final\الشغل final\الشغل final\bin\Debug\الشغل final.exe.config
+E:\الشغل final\الشغل final\الشغل final\bin\Debug\الشغل final.exe
+E:\الشغل final\الشغل final\الشغل final\bin\Debug\الشغل final.pdb
+E:\الشغل final\الشغل final\الشغل final\bin\Debug\Guna.UI.dll
+E:\الشغل final\الشغل final\الشغل final\bin\Debug\Guna.UI2.dll
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\______fi.B904A8F7.Up2Date
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل final.exe
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل final.pdb
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.CustomerScreen.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.SuppliersScreen.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.ItemsScreen.resources
+E:\الشغل final\الشغل final\الشغل final\obj\Debug\الشغل_final.StoreScreen.resources
