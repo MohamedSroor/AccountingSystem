@@ -6,12 +6,13 @@ using Guna.UI2.WinForms;
 
 namespace الشغل_final
 {
-    public partial class Form1 : Form
+    public partial class ElHashimiGroup : Form
     {
       
-        public Form1()
+        public ElHashimiGroup()
         {
             InitializeComponent();
+            OpenHomePage();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -23,80 +24,64 @@ namespace الشغل_final
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void MaxBtn_Click(object sender, EventArgs e)
+        private void OpenHomePage()
         {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized; 
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
+            // فتح الشاشة الرئيسية في الـ Panel
+            HomeScreenUserControl homePage = new HomeScreenUserControl();
+            homePage.Dock = DockStyle.Fill;
+            LoadUserControl(homePage);
+
+            // تفعيل زر الـ HomeBtn
+            HomeBtn.Checked = true;
         }
 
-         private void CustomerBtn_Click(object sender, EventArgs e)
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            OpenHomePage();
+        }
+
+        private void LoadUserControl(UserControl userControl)
+        {
+            guna2Panel07.Controls.Clear(); // مسح أي عناصر موجودة في الـ Panel
+            userControl.Dock = DockStyle.Fill; // ملء الـ Panel بالكامل
+            guna2Panel07.Controls.Add(userControl); // إضافة الـ UserControl للـ Panel
+        }
+
+        private void CustomerBtn_Click(object sender, EventArgs e)
         {
             // عرض شاشة الموردين
-            CustomerScreen newForm = new CustomerScreen();
-            // إعداد النافذة الجديدة لتكون متناسبة مع اللوحة
-            newForm.TopLevel = false;  
-            newForm.FormBorderStyle = FormBorderStyle.None; 
-            newForm.Dock = DockStyle.Fill; // ملء اللوحة بالكامل
-
-            // مسح محتويات اللوحة وإضافة النافذة الجديدة
-            guna2Panel7.Controls.Clear(); 
-            guna2Panel7.Controls.Add(newForm); 
-            newForm.Show();
+            CustomerScreenUserControl CustomerScreen = new CustomerScreenUserControl();
+           
+            CustomerScreen.Dock = DockStyle.Fill;
+            LoadUserControl(CustomerScreen);
         }
        
 
         private void SuppliersBtn_Click(object sender, EventArgs e)
         {
             // عرض شاشة الموردين
-            SuppliersScreen newForm = new SuppliersScreen();
-            // إعداد النافذة الجديدة لتكون متناسبة مع اللوحة
-            newForm.TopLevel = false;  
-            newForm.FormBorderStyle = FormBorderStyle.None; 
-            newForm.Dock = DockStyle.Fill; 
-
-            // مسح محتويات اللوحة وإضافة النافذة الجديدة
-            guna2Panel7.Controls.Clear(); 
-            guna2Panel7.Controls.Add(newForm); 
-            newForm.Show();
+            SuppliersScreenUserControl SuppliersScreen = new SuppliersScreenUserControl();
+            SuppliersScreen.Dock = DockStyle.Fill;
+            LoadUserControl(SuppliersScreen);
         }
 
         private void ItemsBtn_Click(object sender, EventArgs e)
         {
             // عرض شاشة الموردين
-            ItemsScreen newForm = new ItemsScreen();
+            ItemsScreenUserControl ItemsScreen = new ItemsScreenUserControl();
             // إعداد النافذة الجديدة لتكون متناسبة مع اللوحة
-            newForm.TopLevel = false;
-            newForm.FormBorderStyle = FormBorderStyle.None;
-            newForm.Dock = DockStyle.Fill;
-
-            // مسح محتويات اللوحة وإضافة النافذة الجديدة
-            guna2Panel7.Controls.Clear();
-            guna2Panel7.Controls.Add(newForm);
-            newForm.Show();
+            ItemsScreen.Dock = DockStyle.Fill;
+            LoadUserControl(ItemsScreen);
         }
 
         private void StoreBtn_Click(object sender, EventArgs e)
         {
             // عرض شاشة الموردين
-            StoreScreen newForm = new StoreScreen();
-            // إعداد النافذة الجديدة لتكون متناسبة مع اللوحة
-            newForm.TopLevel = false;
-            newForm.FormBorderStyle = FormBorderStyle.None;
-            newForm.Dock = DockStyle.Fill;
-
-            // مسح محتويات اللوحة وإضافة النافذة الجديدة
-            guna2Panel7.Controls.Clear();
-            guna2Panel7.Controls.Add(newForm);
-            newForm.Show();
+            StoreScreenUserControl StoreScreen = new StoreScreenUserControl();
+            StoreScreen.Dock = DockStyle.Fill;
+            LoadUserControl(StoreScreen);
         }
 
     }
-
+    
 }

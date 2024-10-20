@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace الشغل_final
 {
-    public partial class StoreScreen : Form
+    public partial class StoreScreenUserControl : UserControl
     {
         private List<Product> products = new List<Product>(); // قائمة المنتجات
         private Product currentProduct; // المنتج الحالي
         private int productCodeCounter = 1; // عداد أكواد المنتجات
 
-        public StoreScreen()
+        public StoreScreenUserControl()
         {
             InitializeComponent();
             InitializeDataGridView();
@@ -20,25 +21,32 @@ namespace الشغل_final
         private void InitializeDataGridView()
         {
             guna2DataGridView1.AutoGenerateColumns = false;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("63, 62, 67");
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             string name = txtProductName.Text; // اسم المنتج
             string quantityText = txtProductQuantity.Text; // كمية المنتج
+            string quantityUnit = guna2TextBox1.Text; // المنتج بالوحدات  
+            string unit = checkBoxProductQntUnits.Checked ? "برانيك" : ""; // استخدام الوحدة إذا كانت العلامة محددة
 
             // التحقق من إدخالات المستخدم
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(quantityText))
+            if (string.IsNullOrWhiteSpace(name) && string.IsNullOrWhiteSpace(quantityText) && !checkBoxProductQntUnits.Checked)
             {
-                guna2MessageDialog1.Show("يرجى ملء جميع الحقول.");
-                return; // الخروج إذا كان أي حقل فارغ
+                guna2MessageDialog1.Show("يرجى ملء الحقول الاختيارية على الأقل.");
+                return; // الخروج إذا كانت جميع الحقول فارغة
             }
 
-            if (!int.TryParse(quantityText, out int quantity))
+            int quantity = 0; // مقدار الكمية
+            if (!string.IsNullOrWhiteSpace(quantityText) && !int.TryParse(quantityText, out quantity))
             {
                 guna2MessageDialog1.Show("يرجى إدخال كمية صحيحة.");
                 return; // الخروج إذا كانت الكمية غير صحيحة
             }
+
+            // إنشاء نص وحدة الكمية
+            string productQntUnits = string.IsNullOrWhiteSpace(quantityUnit) ? "" : quantityUnit.ToString() + " " + unit;
 
             // إضافة منتج جديد إذا لم يتم تحرير منتج حالي
             if (currentProduct == null)
@@ -47,7 +55,8 @@ namespace الشغل_final
                 {
                     ProductCode = productCodeCounter.ToString(),
                     ProductName = name,
-                    ProductQuantity = quantity
+                    ProductQuantity = quantity,
+                    ProductQntUnits = productQntUnits // إضافة وحدة الكمية
                 });
                 productCodeCounter++;
             }
@@ -56,6 +65,7 @@ namespace الشغل_final
                 // تحديث المنتج الحالي
                 currentProduct.ProductName = name;
                 currentProduct.ProductQuantity = quantity;
+                currentProduct.ProductQntUnits = productQntUnits; // تحديث وحدة الكمية
                 currentProduct = null; // إعادة تعيين المنتج الحالي بعد التحرير
             }
 
@@ -75,6 +85,7 @@ namespace الشغل_final
         {
             txtProductName.Clear();
             txtProductQuantity.Clear(); // إعادة تعيين كمية المنتج
+            checkBoxProductQntUnits.Checked = false; // إعادة تعيين العلامة
             txtProductCode.Text = productCodeCounter.ToString(); // إعادة تعيين كود المنتج
         }
 
@@ -87,6 +98,7 @@ namespace الشغل_final
                 txtProductCode.Text = product.ProductCode;
                 txtProductName.Text = product.ProductName;
                 txtProductQuantity.Text = product.ProductQuantity.ToString(); // تعيين كمية المنتج
+                checkBoxProductQntUnits.Checked = !string.IsNullOrWhiteSpace(product.ProductQntUnits); // تحديد حالة العلامة
             }
         }
 
@@ -132,5 +144,6 @@ namespace الشغل_final
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
         public int ProductQuantity { get; set; } // إضافة خاصية الكمية
+        public string ProductQntUnits { get; set; } // إضافة خاصية وحدة الكمية
     }
 }

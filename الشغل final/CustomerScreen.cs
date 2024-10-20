@@ -6,13 +6,13 @@ using System.Drawing;
 
 namespace الشغل_final
 {
-    public partial class CustomerScreen : Form
+    public partial class CustomerScreenUserControl : UserControl
     {
         private List<Customer> customers = new List<Customer>();
         private Customer currentCustomer;
         private int customerCodeCounter = 1; // Counter for customer codes
 
-        public CustomerScreen()
+        public CustomerScreenUserControl()
         {
             InitializeComponent();
             InitializeDataGridView(); // Initialize DataGridView columns
@@ -22,7 +22,7 @@ namespace الشغل_final
         private void InitializeDataGridView()
         {
             guna2DataGridView1.AutoGenerateColumns = false;
-
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("63, 62, 67");
         }
 
         private void AddGridColumn(string propertyName, string headerText)
@@ -109,8 +109,8 @@ namespace الشغل_final
             var customer = guna2DataGridView1.Rows[rowIndex].DataBoundItem as Customer;
             if (customer != null)
             {
-                currentCustomer = customer; 
-                txtCustomerCode.Text = customer.CustCode; 
+                currentCustomer = customer;
+                txtCustomerCode.Text = customer.CustCode;
                 txtCustomerName.Text = customer.CustName;
                 txtCustomerPhone.Text = customer.CustPhone;
                 txtCustomerAddress.Text = customer.CustAddress;

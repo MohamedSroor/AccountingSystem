@@ -6,13 +6,13 @@ using System.Drawing;
 
 namespace الشغل_final
 {
-    public partial class SuppliersScreen : Form
+    public partial class SuppliersScreenUserControl : UserControl
     {
         private List<Supplier> suppliers = new List<Supplier>(); // قائمة الموردين
         private Supplier currentSupplier; // المورد الحالي
         private int supplierCodeCounter = 1; // عداد أكواد الموردين
 
-        public SuppliersScreen()
+        public SuppliersScreenUserControl()
         {
             InitializeComponent();
             InitializeDataGridView();
@@ -22,6 +22,7 @@ namespace الشغل_final
         private void InitializeDataGridView()
         {
             guna2DataGridView1.AutoGenerateColumns = false;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("63, 62, 67");
         }
 
         private void AddButton_Click(object sender, EventArgs e)

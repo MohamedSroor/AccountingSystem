@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace الشغل_final
 {
-    public partial class ItemsScreen : Form
+    public partial class ItemsScreenUserControl : UserControl
     {
         private List<Item> items = new List<Item>(); // قائمة العناصر
         private Item currentItem; // العنصر الحالي
         private int itemCodeCounter = 1; // عداد أكواد العناصر
 
-        public ItemsScreen()
+        public ItemsScreenUserControl()
         {
             InitializeComponent();
             InitializeDataGridView();
@@ -20,6 +21,7 @@ namespace الشغل_final
         private void InitializeDataGridView()
         {
             guna2DataGridView1.AutoGenerateColumns = false;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("63, 62, 67");
         }
 
         private void AddButton_Click(object sender, EventArgs e)

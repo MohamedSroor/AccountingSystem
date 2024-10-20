@@ -1,6 +1,6 @@
 ﻿namespace الشغل_final
 {
-    partial class ItemsScreen
+    partial class ItemsScreenUserControl
     {
         /// <summary>
         /// Required designer variable.
@@ -42,14 +42,14 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.DeleteIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -122,7 +122,7 @@
             this.AddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.AddBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(62)))), ((int)(((byte)(204)))));
+            this.AddBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(62)))), ((int)(((byte)(67)))));
             this.AddBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(891, 36);
@@ -207,7 +207,7 @@
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -263,6 +263,40 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
+            // ItemCode
+            // 
+            this.ItemCode.DataPropertyName = "ItemCode";
+            this.ItemCode.HeaderText = "الكود";
+            this.ItemCode.MinimumWidth = 6;
+            this.ItemCode.Name = "ItemCode";
+            this.ItemCode.ReadOnly = true;
+            // 
+            // ItemName
+            // 
+            this.ItemName.DataPropertyName = "ItemName";
+            this.ItemName.HeaderText = "اسم الصنف";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            // 
+            // EditIcon
+            // 
+            this.EditIcon.DataPropertyName = "EditIcon";
+            this.EditIcon.HeaderText = "";
+            this.EditIcon.Image = global::الشغل_final.Properties.Resources.editing;
+            this.EditIcon.MinimumWidth = 6;
+            this.EditIcon.Name = "EditIcon";
+            this.EditIcon.ReadOnly = true;
+            // 
+            // DeleteIcon
+            // 
+            this.DeleteIcon.DataPropertyName = "DeleteIcon";
+            this.DeleteIcon.HeaderText = "";
+            this.DeleteIcon.Image = global::الشغل_final.Properties.Resources.delete;
+            this.DeleteIcon.MinimumWidth = 6;
+            this.DeleteIcon.Name = "DeleteIcon";
+            this.DeleteIcon.ReadOnly = true;
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
@@ -301,47 +335,12 @@
             this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog2.Text = null;
             // 
-            // ItemCode
-            // 
-            this.ItemCode.DataPropertyName = "ItemCode";
-            this.ItemCode.HeaderText = "الكود";
-            this.ItemCode.MinimumWidth = 6;
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.ReadOnly = true;
-            // 
-            // ItemName
-            // 
-            this.ItemName.DataPropertyName = "ItemName";
-            this.ItemName.HeaderText = "اسم الصنف";
-            this.ItemName.MinimumWidth = 6;
-            this.ItemName.Name = "ItemName";
-            this.ItemName.ReadOnly = true;
-            // 
-            // EditIcon
-            // 
-            this.EditIcon.DataPropertyName = "EditIcon";
-            this.EditIcon.HeaderText = "";
-            this.EditIcon.Image = global::الشغل_final.Properties.Resources.editing;
-            this.EditIcon.MinimumWidth = 6;
-            this.EditIcon.Name = "EditIcon";
-            this.EditIcon.ReadOnly = true;
-            // 
-            // DeleteIcon
-            // 
-            this.DeleteIcon.DataPropertyName = "DeleteIcon";
-            this.DeleteIcon.HeaderText = "";
-            this.DeleteIcon.Image = global::الشغل_final.Properties.Resources.delete;
-            this.DeleteIcon.MinimumWidth = 6;
-            this.DeleteIcon.Name = "DeleteIcon";
-            this.DeleteIcon.ReadOnly = true;
-            // 
             // ItemsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1339, 794);
             this.Controls.Add(this.guna2Panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemsScreen";
             this.Text = "ItemsScreen";
             this.guna2Panel3.ResumeLayout(false);

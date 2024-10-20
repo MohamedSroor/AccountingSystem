@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerScreen.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomerScreen.Designer.cs">
       <DependentUpon>CustomerScreen.cs</DependentUpon>
@@ -68,8 +68,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeScreen.Designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemsScreen.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ItemsScreen.Designer.cs">
       <DependentUpon>ItemsScreen.cs</DependentUpon>
@@ -77,13 +83,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreScreen.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="StoreScreen.Designer.cs">
       <DependentUpon>StoreScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SuppliersScreen.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SuppliersScreen.Designer.cs">
       <DependentUpon>SuppliersScreen.cs</DependentUpon>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemsScreen.resx">
       <DependentUpon>ItemsScreen.cs</DependentUpon>
@@ -171,6 +180,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Logos\editing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logos\arrow-down-sign-to-navigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logos\icons8-down-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logos\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logos\Untitled-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logos\logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
